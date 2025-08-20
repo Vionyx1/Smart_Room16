@@ -1,5 +1,5 @@
-// Initialize Firebasevar 
-firebaseConfig = {
+// Initialize Firebase
+var firebaseConfig = {
     apiKey: "AIzaSyBUe4wiGjZRxn-ZrBRt4n1sPY8KHnOCOwI",
     authDomain: "smart-room16.firebaseapp.com",
     databaseURL: "https://smart-room16-default-rtdb.firebaseio.com",
@@ -81,5 +81,6 @@ $(document).ready(function() {
         });
     }
 });
+
 
 
