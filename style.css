@@ -188,6 +188,10 @@ body {
     cursor: pointer;
     transition: all 300ms ease-in-out;
     box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+
+    /* Move button up */
+    position: relative;
+    top: -25px; /* Adjust this value as needed */
 }
 
 #login button:hover {
@@ -196,12 +200,45 @@ body {
 }
 
 /* Style for error message */
+/* Style for error message */
 #error-message {
-    color: red;
+    color: #ff4d4d; /* Bright red */
     display: none; /* Hidden by default */
-    margin-top: 50px;
-    font-size: 18px;
+    margin-top: 20px; /* Space above buttons */
+    font-size: 20px; /* Slightly larger */
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, /* Black outline for readability */
+        0 0 5px #ff4d4d, 0 0 10px #ff4d4d; /* Glow */
+    animation: shake 0.5s; /* Shake animation */
 }
+
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Ensure button glow appears below error */
+#login button {
+    position: relative;
+    z-index: 1; /* Button stays above background but below error shadow */
+    margin-top: 40px; /* Space between error message and button */
+}
+
+
+
 
 /* Responsive Adjustments (Optional) */
 @media (max-width: 768px) {
