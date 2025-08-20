@@ -9,41 +9,22 @@ body {
     text-align: center;
     background: #031321;
     margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrollbars on the login overlay */
+    overflow-y: auto; /* Prevent scrollbars on the login overlay */
     font-family: 'Arial', sans-serif;
 }
 
-.wrapper {
-    display: flex;
+.wrapper, .analog {
+    margin-top: 20px;   /* Small spacing from top */
+    min-height: 0;       /* Let it grow naturally */
+    height: auto;        /* Remove fixed height */
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start; /* move content to top */
-}
-
-.analog {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start; /* move content to top */
-}
-
-
-.progress {
-    margin: 50px auto;
-    width: 70%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: flex-start; /* keep content at top */
 }
 
-.places {
-    margin: 60px auto;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.progress, .places {
+    align-items: flex-start;
 }
 
 .toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
@@ -289,5 +270,6 @@ body {
         font-size: 18px;
     }
 }
+
 
 
