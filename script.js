@@ -1,4 +1,13 @@
-// Initialize Firebase
+// Initialize Firebasevar firebaseConfig = {
+    apiKey: "AIzaSyBUe4wiGjZRxn-ZrBRt4n1sPY8KHnOCOwI",
+    authDomain: "smart-room16.firebaseapp.com",
+    databaseURL: "https://smart-room16-default-rtdb.firebaseio.com",
+    projectId: "smart-room16",
+    storageBucket: "smart-room16.appspot.com",
+    messagingSenderId: "1088790963748",
+    appId: "1:1088790963748:web:07b99d59acaf28986b5ab1",
+    measurementId: "G-WTR1TYFCF7"
+};
 firebase.initializeApp(firebaseConfig);
 
 $(document).ready(function() {
@@ -71,3 +80,4 @@ $(document).ready(function() {
         });
     }
 });
+
