@@ -4,21 +4,24 @@
     <meta charset="utf-8">
     <title>Smart Room - Multi Toggle</title>
     
-    <!-- Include jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Include jQuery (only once, before script.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <!-- Include Firebase (Version 8.10.0 for compatibility) -->
+    <!-- Include Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     
     <!-- Include Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" type="text/css" href="Style.css">
     
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Firebase config -->
+    <script src="Config.js"></script>
+    
+    <!-- Your JS -->
     <script src="script.js"></script>
-    <!-- Inline Styles (if any) -->
-    <!-- It's recommended to keep all styles in Style.css for better maintainability -->
 </head>
 <body>
     <!-- Password Overlay -->
@@ -29,12 +32,10 @@
             <h5>Please Enter the password:</h5>
             <input type="password" id="passwordInput" placeholder="Password">
             <button id="Login">Login</button>
-            <!-- Error message placeholder -->
             <div id="error-message">Incorrect password</div>
         </div>
     </div>
-
-    <!-- Main Content (hidden by default) -->
+   <!-- Main Content (hidden by default) -->
     <div id="content">
         <div class="wrapper">	
             <!-- LED 1 -->
@@ -120,3 +121,4 @@
             </div>
         </div>
     </div>
+
