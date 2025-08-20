@@ -1,30 +1,46 @@
 /* General Styles */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 body {
     text-align: center;
     background: #031321;
     margin: 0; /* Remove default margin */
-    overflow-y: auto; /* Prevent scrollbars on the login overlay */
+    overflow: hidden; /* Prevent scrollbars on the login overlay */
     font-family: 'Arial', sans-serif;
 }
 
-.wrapper, .analog {
-    margin-top: 20px;   /* Small spacing from top */
-    min-height: 0;       /* Let it grow naturally */
-    height: auto;        /* Remove fixed height */
-    flex-direction: row;
+.wrapper {
+    height: 50vh;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start; /* keep content at top */
+    align-items: center;
 }
 
-.progress, .places {
-    align-items: flex-start;
+.analog {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    margin: 50px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.places {
+    margin: 60px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
@@ -270,6 +286,3 @@ body {
         font-size: 18px;
     }
 }
-
-
-
