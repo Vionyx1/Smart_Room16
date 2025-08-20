@@ -14,22 +14,19 @@ body {
 }
 
 .wrapper {
-    height: 50vh;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* move content to top */
 }
 
 .analog {
-    height: 35vh;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* move content to top */
 }
+
 
 .progress {
     margin: 50px auto;
@@ -292,4 +289,5 @@ body {
         font-size: 18px;
     }
 }
+
 
