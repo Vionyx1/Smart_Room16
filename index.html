@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Smart Room - Multi Toggle</title>
     
-    <!-- Include jQuery -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
-    <!-- Include Firebase -->
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
@@ -15,8 +15,25 @@
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
     <!-- Your CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- Your JS -->
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
+    <!-- Firebase Config (MUST come before script.js) -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBUe4wiGjZRxn-ZrBRt4n1sPY8KHnOCOwI",
+            authDomain: "smart-room16.firebaseapp.com",
+            databaseURL: "https://smart-room16-default-rtdb.firebaseio.com",
+            projectId: "smart-room16",
+            storageBucket: "smart-room16.appspot.com",
+            messagingSenderId: "1088790963748",
+            appId: "1:1088790963748:web:07b99d59acaf28986b5ab1",
+            measurementId: "G-WTR1TYFCF7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Your JS (must come AFTER Firebase init) -->
     <script src="script.js"></script>
 </head>
 <body>
@@ -33,19 +50,15 @@
     </div>
 
     <!-- Main Content (hidden by default) -->
-    <div id="content">
+    <div id="content" style="display:none;">
         <div class="wrapper">	
             <!-- LED 1 -->
             <div class="progress">
                 <a class="icon1">
                     <img src="Photos/outlet_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="Light icon" width="100" height="100">
                 </a>
-                <div class="toggle-btn" id="unact">
-                    <div class="inner-circle"></div>
-                </div>
-                <div class="toggle-btn active" id="act">
-                    <div class="inner-circle"></div>
-                </div>
+                <div class="toggle-btn" id="unact"><div class="inner-circle"></div></div>
+                <div class="toggle-btn active" id="act"><div class="inner-circle"></div></div>
             </div>
 
             <!-- LED 2 -->
@@ -53,12 +66,8 @@
                 <a class="icon1">
                     <img src="Photos/outlet_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="Light icon" width="100" height="100">
                 </a>
-                <div class="toggle-btn1" id="unact1">
-                    <div class="inner-circle"></div>
-                </div>
-                <div class="toggle-btn1 active" id="act1">
-                    <div class="inner-circle"></div>
-                </div>
+                <div class="toggle-btn1" id="unact1"><div class="inner-circle"></div></div>
+                <div class="toggle-btn1 active" id="act1"><div class="inner-circle"></div></div>
             </div>
             
             <!-- LED 3 / Fan -->
@@ -66,12 +75,8 @@
                 <a class="icon1">
                     <img src="Photos/mode_fan_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="Fan icon" width="100" height="100">
                 </a>
-                <div class="toggle-btn2" id="unact2">
-                    <div class="inner-circle"></div>
-                </div>
-                <div class="toggle-btn2 active" id="act2">
-                    <div class="inner-circle"></div>
-                </div>
+                <div class="toggle-btn2" id="unact2"><div class="inner-circle"></div></div>
+                <div class="toggle-btn2 active" id="act2"><div class="inner-circle"></div></div>
             </div>
 
             <!-- LED 4 -->
@@ -79,37 +84,27 @@
                 <a class="icon1">
                     <img src="Photos/light_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="Light icon" width="100" height="100">
                 </a>
-                <div class="toggle-btn3" id="unact3">
-                    <div class="inner-circle"></div>
-                </div>
-                <div class="toggle-btn3 active" id="act3">
-                    <div class="inner-circle"></div>
-                </div>
+                <div class="toggle-btn3" id="unact3"><div class="inner-circle"></div></div>
+                <div class="toggle-btn3 active" id="act3"><div class="inner-circle"></div></div>
             </div>	
         </div>
 
         <div class="analog">
-            <!-- Temperature Display -->
+            <!-- Temperature -->
             <div class="places">
-                <a class="icon2">
-                    <img src="Photos/computer-icons-thermometer-temperature-business-celsius-glass-roof-(2).png" alt="Temperature icon" width="200" height="200">
-                </a>
+                <a class="icon2"><img src="Photos/computer-icons-thermometer-temperature-business-celsius-glass-roof-(2).png" alt="Temperature icon" width="200" height="200"></a>
                 <span class="temp">Temperature: --°C</span>	
             </div>
 
-            <!-- Humidity Display -->
+            <!-- Humidity -->
             <div class="places">
-                <a class="icon2">
-                    <img src="Photos/humidity-icon-flat-style-climate-260nw-1359881705.png" alt="Humidity icon" width="200" height="200">
-                </a>
+                <a class="icon2"><img src="Photos/humidity-icon-flat-style-climate-260nw-1359881705.png" alt="Humidity icon" width="200" height="200"></a>
                 <span class="humidity">Humidity: --%</span>	
             </div>
 
             <!-- Fan Control -->
             <div class="places">
-                <a class="icon2">
-                    <img src="Photos/3141930-200.png" alt="Fan icon" width="150" height="150">
-                </a>
+                <a class="icon2"><img src="Photos/3141930-200.png" alt="Fan icon" width="150" height="150"></a>
                 <span class="fan-speed">Fan Speed: <span id="fanPercentage">0%</span></span>
                 <div class="button-container">
                     <button class="button">-</button>
@@ -118,5 +113,5 @@
             </div>
         </div>
     </div>
-
-
+</body>
+</html>
