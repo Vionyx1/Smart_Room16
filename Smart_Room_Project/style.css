@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     text-align: center;
     background: #031321;
@@ -42,7 +41,6 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
 .toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
     width: 80px;
     height: 40px;
@@ -286,3 +284,4 @@ body {
         font-size: 18px;
     }
 }
+
