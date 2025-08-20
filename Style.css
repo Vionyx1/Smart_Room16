@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    text-align: center;
+    background: #031321;
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrollbars on the login overlay */
+    font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.analog {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    margin: 50px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.places {
+    margin: 60px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
+    width: 80px;
+    height: 40px;
+    background: rgb(60, 60, 60);
+    border-radius: 30px;
+    transition: background 300ms ease-in-out;
+    position: relative; /* To position inner-circle */
+    cursor: pointer;
+    margin: 10px auto;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Center vertically */
+    padding: 0; /* Remove padding for precise positioning */
+}
+
+.toggle-btn > .inner-circle, .toggle-btn1 > .inner-circle, .toggle-btn2 > .inner-circle, .toggle-btn3 > .inner-circle {
+    width: 30px; /* Reduced size for better fit */
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 300ms ease-in-out, background 300ms ease-in-out;
+    transform: translateX(0); /* Initial position */
+}
+
+.toggle-btn.active > .inner-circle, .toggle-btn1.active > .inner-circle, .toggle-btn2.active > .inner-circle, .toggle-btn3.active > .inner-circle {
+    transform: translateX(40px); /* Move to the right end */
+}
+
+.toggle-btn.active, .toggle-btn1.active, .toggle-btn2.active, .toggle-btn3.active {
+    background: rgb(0, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+    transition-delay: 0.5s;
+}
+
+.icon1, .icon2 {
+    color: #fff;
+    margin: 10px auto;
+}
+
+.humidity, .temp {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center;
+    gap: 50px; /* Horizontal space between the buttons */
+    margin-top: 10px; /* Space between fan percentage and buttons */
+    margin-bottom: 0; /* Reduce space below the buttons */
+}
+
+.icon2 {
+    margin-bottom: 10px; /* Reduce space below the fan icon */
+}
+
+.fan-speed {
+    font-size: 28px;
+    color: #ffffff;
+    margin-top: 10px; /* Space between fan icon and fan speed text */
+    margin-bottom: 20px; /* Add space under the fan percentage */
+    text-align: center;
+}
+
+.button, .button1 {
+    font-size: 50px;
+    color: #ffffff;
+    background: rgb(60, 60, 60);  /* Match the toggle buttons */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 300ms ease-in-out;
+    cursor: pointer;
+    border: none; /* Remove default border */
+}
+
+.button:hover, .button1:hover {
+    background: rgb(0, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+}
+
+/* Styling for the password overlay */
+#login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Photos/9ac6c4c0e71c2f3b19d1a61eeb758c0b.jpg') no-repeat center center; /* Background image for the overlay */
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it overlays other content */
+}
+
+
+#login div {
+    text-align: center;
+    padding: 50px;
+    background: rgba(30, 30, 30, 0.95); /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.7); /* Glowing effect */
+}
+
+#login p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#login input {
+    font-size: 18px;
+    padding: 10px;
+    width: 80%;
+    margin: 40px 0;
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Cyan border */
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+#login input:focus {
+    border-color: rgba(0, 255, 255, 1); /* Bright cyan border on focus */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#login button {
+    font-size: 20px;
+    color: #ffffff;
+    background: rgb(60, 60, 60);  /* Match the toggle buttons */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+
+    /* Move button up */
+    position: relative;
+    top: -25px; /* Adjust this value as needed */
+}
+
+#login button:hover {
+    background: rgb(0, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+}
+
+/* Style for error message */
+/* Style for error message */
+#error-message {
+    color: #ff4d4d; /* Bright red */
+    display: none; /* Hidden by default */
+    margin-top: 20px; /* Space above buttons */
+    font-size: 20px; /* Slightly larger */
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 #000, 
+         1px -1px 0 #000, 
+        -1px  1px 0 #000, 
+         1px  1px 0 #000, /* Black outline for readability */
+        0 0 5px #ff4d4d, 0 0 10px #ff4d4d; /* Glow */
+    animation: shake 0.5s; /* Shake animation */
+}
+
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Ensure button glow appears below error */
+#login button {
+    position: relative;
+    z-index: 1; /* Button stays above background but below error shadow */
+    margin-top: 40px; /* Space between error message and button */
+}
+
+
+
+
+/* Responsive Adjustments (Optional) */
+@media (max-width: 768px) {
+    .wrapper, .analog {
+        flex-direction: column;
+    }
+
+    .progress, .places {
+        width: 90%;
+    }
+
+    .toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
+        width: 60px;
+        height: 30px;
+    }
+
+    .toggle-btn > .inner-circle, .toggle-btn1 > .inner-circle, .toggle-btn2 > .inner-circle, .toggle-btn3 > .inner-circle {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fan-speed, .humidity, .temp {
+        font-size: 22px;
+    }
+
+    .button, .button1 {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+
+    #login div {
+        padding: 30px;
+    }
+
+    #login p {
+        font-size: 20px;
+    }
+
+    #login input {
+        font-size: 16px;
+    }
+
+    #login button {
+        font-size: 18px;
+    }
+}
