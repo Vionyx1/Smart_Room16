@@ -1,3 +1,4 @@
+// Firebase config
 var firebaseConfig = {
     apiKey: "AIzaSyBUe4wiGjZRxn-ZrBRt4n1sPY8KHnOCOwI",
     authDomain: "smart-room16.firebaseapp.com",
@@ -8,7 +9,7 @@ var firebaseConfig = {
     appId: "1:1088790963748:web:07b99d59acaf28986b5ab1",
     measurementId: "G-WTR1TYFCF7"
 };
-
+        
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -82,4 +83,3 @@ $(document).ready(function() {
         });
     }
 });
-
