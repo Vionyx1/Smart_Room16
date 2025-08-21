@@ -2,8 +2,8 @@
 body {
     text-align: center;
     background: #031321;
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrollbars on the login overlay */
+    margin: 0;
+    overflow: hidden;
     font-family: 'Arial', sans-serif;
 }
 
@@ -49,25 +49,25 @@ body {
     background: rgb(60, 60, 60);
     border-radius: 30px;
     transition: background 300ms ease-in-out;
-    position: relative; /* To position inner-circle */
+    position: relative;
     cursor: pointer;
     margin: 10px auto;
-    display: flex; /* Enable Flexbox */
-    align-items: center; /* Center vertically */
-    padding: 0; /* Remove padding for precise positioning */
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .toggle-btn > .inner-circle, .toggle-btn1 > .inner-circle, .toggle-btn2 > .inner-circle, .toggle-btn3 > .inner-circle {
-    width: 30px; /* Reduced size for better fit */
+    width: 30px;
     height: 30px;
     background: #fff;
     border-radius: 50%;
     transition: transform 300ms ease-in-out, background 300ms ease-in-out;
-    transform: translateX(0); /* Initial position */
+    transform: translateX(0);
 }
 
 .toggle-btn.active > .inner-circle, .toggle-btn1.active > .inner-circle, .toggle-btn2.active > .inner-circle, .toggle-btn3.active > .inner-circle {
-    transform: translateX(40px); /* Move to the right end */
+    transform: translateX(40px);
 }
 
 .toggle-btn.active, .toggle-btn1.active, .toggle-btn2.active, .toggle-btn3.active {
@@ -88,29 +88,29 @@ body {
 
 .button-container {
     display: flex;
-    justify-content: center; /* Center the buttons */
+    justify-content: center;
     align-items: center;
-    gap: 50px; /* Horizontal space between the buttons */
-    margin-top: 10px; /* Space between fan percentage and buttons */
-    margin-bottom: 0; /* Reduce space below the buttons */
+    gap: 50px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .icon2 {
-    margin-bottom: 10px; /* Reduce space below the fan icon */
+    margin-bottom: 10px;
 }
 
 .fan-speed {
     font-size: 28px;
     color: #ffffff;
-    margin-top: 10px; /* Space between fan icon and fan speed text */
-    margin-bottom: 20px; /* Add space under the fan percentage */
+    margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .button, .button1 {
     font-size: 50px;
     color: #ffffff;
-    background: rgb(60, 60, 60);  /* Match the toggle buttons */
+    background: rgb(60, 60, 60);
     width: 80px;
     height: 80px;
     display: flex;
@@ -119,7 +119,7 @@ body {
     border-radius: 50%;
     transition: background 300ms ease-in-out;
     cursor: pointer;
-    border: none; /* Remove default border */
+    border: none;
 }
 
 .button:hover, .button1:hover {
@@ -134,22 +134,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Photos/9ac6c4c0e71c2f3b19d1a61eeb758c0b.jpg') no-repeat center center; /* Background image for the overlay */
+    background: url('Photos/9ac6c4c0e71c2f3b19d1a61eeb758c0b.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it overlays other content */
+    z-index: 9999;
 }
-
 
 #login div {
     text-align: center;
     padding: 50px;
-    background: rgba(30, 30, 30, 0.95); /* Dark background */
+    background: rgba(30, 30, 30, 0.95);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.7); /* Glowing effect */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.7);
 }
 
 #login p {
@@ -163,7 +162,7 @@ body {
     padding: 10px;
     width: 80%;
     margin: 40px 0;
-    border: 2px solid rgba(0, 255, 255, 0.5); /* Cyan border */
+    border: 2px solid rgba(0, 255, 255, 0.5);
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -173,7 +172,7 @@ body {
 }
 
 #login input:focus {
-    border-color: rgba(0, 255, 255, 1); /* Bright cyan border on focus */
+    border-color: rgba(0, 255, 255, 1);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
     background: rgba(0, 0, 0, 0.9);
 }
@@ -181,17 +180,15 @@ body {
 #login button {
     font-size: 20px;
     color: #ffffff;
-    background: rgb(60, 60, 60);  /* Match the toggle buttons */
+    background: rgb(60, 60, 60);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 300ms ease-in-out;
     box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
-
-    /* Move button up */
     position: relative;
-    top: -25px; /* Adjust this value as needed */
+    top: -25px;
 }
 
 #login button:hover {
@@ -199,24 +196,21 @@ body {
     box-shadow: 0 0 10px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
 }
 
-/* Style for error message */
-/* Style for error message */
 #error-message {
-    color: #ff4d4d; /* Bright red */
-    display: none; /* Hidden by default */
-    margin-top: 20px; /* Space above buttons */
-    font-size: 20px; /* Slightly larger */
+    color: #ff4d4d;
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 
         -1px -1px 0 #000, 
          1px -1px 0 #000, 
         -1px  1px 0 #000, 
-         1px  1px 0 #000, /* Black outline for readability */
-        0 0 5px #ff4d4d, 0 0 10px #ff4d4d; /* Glow */
-    animation: shake 0.5s; /* Shake animation */
+         1px  1px 0 #000,
+        0 0 5px #ff4d4d, 0 0 10px #ff4d4d;
+    animation: shake 0.5s;
 }
 
-/* Shake animation */
 @keyframes shake {
     0% { transform: translateX(0); }
     20% { transform: translateX(-10px); }
@@ -230,15 +224,11 @@ body {
     animation: shake 0.5s;
 }
 
-/* Ensure button glow appears below error */
 #login button {
     position: relative;
-    z-index: 1; /* Button stays above background but below error shadow */
-    margin-top: 40px; /* Space between error message and button */
+    z-index: 1;
+    margin-top: 40px;
 }
-
-
-
 
 /* Responsive Adjustments (Optional) */
 @media (max-width: 768px) {
