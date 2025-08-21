@@ -43,9 +43,6 @@ body {
     flex-direction: column;
 }
 
-#content {
-    display: none;
-}
 .toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3 {
     width: 80px;
     height: 40px;
@@ -289,4 +286,3 @@ body {
         font-size: 18px;
     }
 }
-
